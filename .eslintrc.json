@@ -1,3 +1,28 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/strict","plugin:@typescript-eslint/stylistic-type-checked"],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "react/jsx-curly-spacing": [2, { "when": "always" }], // Enforces consistent spacing between the opening and closing brackets in JSX
+    "eqeqeq": ["error", "always"], // Enforces the use of === and !== instead of == and !=
+    "indent": ["error", 2], // Enforces a 2-space indentation
+    "quotes": ["error", "double"], // Enforces the use of double quotes for strings
+    "no-var": "error", // Disallows the use of var, enforcing let or const instead
+    "prefer-const": "error", // Prefers the use of const for variables that are never reassigned
+    "eol-last": ["error", "always"], // Enforces at least one newline at the end of files
+    "curly": ["error", "all"], // Enforces the use of curly braces for all control statements
+    "no-trailing-spaces": ["error", { // Disallows trailing whitespace at the end of lines
+        "skipBlankLines": false, // Enforces the rule even on blank lines
+        "ignoreComments": false // Enforces the rule on lines containing comments
+    }],
+    "space-before-blocks": ["error", "always"], // Enforces a space before blocks
+    "keyword-spacing": ["error", { "before": true, "after": true }], // Enforces spacing before and after keywords
+    "comma-spacing": ["error", { "before": false, "after": true }], // Enforces spacing after comma
+    "array-bracket-spacing": ["error", "always", { "objectsInArrays": false, "arraysInArrays": false }], // Enforces consistent spacing inside array brackets
+    "object-curly-spacing": ["error", "always", { "arraysInObjects": false, "objectsInObjects": false }], // Enforces consistent spacing inside braces of object literals, destructuring assignments, and import/export specifiers
+    "computed-property-spacing": ["error", "never" ], // Enforces consistent spacing inside computed property brackets
+    "space-infix-ops": ["error", { "int32Hint": false }], // Enforces spacing around infix operators
+    "no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 1, "maxBOF": 0 }] // Disallows multiple empty lines
+  }
 }
