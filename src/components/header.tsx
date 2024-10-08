@@ -9,10 +9,9 @@ interface Navigation {
 }
 
 const navItems: Navigation[] = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
+  { name: "How It Works", href: "#how-it-works" },
+  { name: "Explore Pets", href: "#" },
+  { name: "List a Pet", href: "#list-a-pet" },
 ]
 
 export default function Nav() {
