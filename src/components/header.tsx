@@ -2,6 +2,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 import { Dialog, DialogPanel } from "@headlessui/react"
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 
 interface Navigation {
   name: string
@@ -23,7 +24,7 @@ export default function Nav() {
         <div className="flex lg:flex-1">
           <Link href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <img
+            <Image
               alt=""
               src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
               className="h-8 w-auto"
@@ -61,7 +62,7 @@ export default function Nav() {
           <div className="flex navItems-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img
+              <Image
                 alt=""
                 src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
                 className="h-8 w-auto"
