@@ -1,3 +1,5 @@
+"use client"
+
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 import { Dialog, DialogPanel } from "@headlessui/react"
 import { useState } from "react"
@@ -10,9 +12,9 @@ interface Navigation {
 }
 
 const navItems: Navigation[] = [
-  { name: "How It Works", href: "#how-it-works" },
-  { name: "Explore Pets", href: "#" },
-  { name: "List a Pet", href: "#list-a-pet" },
+  { name: "How It Works", href: "/#how-it-works" },
+  { name: "Explore Pets", href: "/explore" },
+  { name: "List a Pet", href: "/#list-a-pet" },
 ]
 
 export default function Header() {
@@ -25,13 +27,13 @@ export default function Header() {
           <Link href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             {/* TODO: update logo */}
-            {/* <Image
+            <Image
               alt=""
               src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
               className="h-8 w-auto"
               width={ 32 }
               height={ 32 }
-            /> */}
+            />
           </Link>
         </div>
         <div className="flex lg:hidden">
